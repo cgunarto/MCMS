@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "MagicalCreature.h"
+#import "CreatureViewController.h"
 
 @interface RootViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -57,7 +58,14 @@
 
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    CreatureViewController *creatureVC = segue.destinationViewController;
+    NSInteger rowNumber = [self.tableView indexPathForSelectedRow].row;
+    MagicalCreature *theCreature = [self.creatures objectAtIndex:rowNumber];
+    creatureVC.creature = theCreature; //we are passing the creature object from RootViewController to the segue's destination (CreatureViewController)
 
+}
 
 
 @end
