@@ -24,11 +24,15 @@
     MagicalCreature *creatureOne = [[MagicalCreature alloc]initWithName:@"Ducky"];
     creatureOne.element = @"water";
     creatureOne.image = [UIImage imageNamed:@"ducky"];
-    creatureOne.accesories = [@[@"floater",@"beak",@"beach towel"]mutableCopy];
+    creatureOne.accesories = [@[@"spectacles",@"macbook",@"XCode", @"nerd tie"]mutableCopy];
     MagicalCreature *creatureTwo = [[MagicalCreature alloc]initWithName:@"Bucky"];
     creatureTwo.element = @"earth";
+    creatureTwo.image = [UIImage imageNamed:@"bucky"];
+    creatureTwo.accesories = [@[@"gangsta hat", @"chain", @"long black tee"]mutableCopy];
     MagicalCreature *creatureThree = [[MagicalCreature alloc]initWithName:@"Lucky"];
     creatureThree.element = @"wind";
+    creatureThree.image = [UIImage imageNamed:@"lucky"];
+    creatureThree.accesories = [@[@"goggles", @"bikini", @"SPF", @"lip gloss"]mutableCopy];
 
     self.creatures = [@[creatureOne, creatureTwo, creatureThree] mutableCopy];
 }
@@ -68,6 +72,9 @@
     [self.textField resignFirstResponder]; //clears the keyboard
 
 }
+
+
+
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
