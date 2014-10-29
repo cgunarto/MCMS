@@ -56,6 +56,15 @@
     cell.textLabel.text = creature.name;
     cell.detailTextLabel.text = creature.element;
 
+    if (creature.isSelectedForBattle == YES)
+    {
+        cell.backgroundColor = [UIColor redColor];
+    }
+    else
+    {
+        cell.backgroundColor = [UIColor whiteColor];
+    }
+
     return cell;
 }
 
@@ -66,7 +75,7 @@
 
         //DEFAULT MAGICAL CREATURE
         NSString *creatureName = self.textField.text;
-        NSString *element = @"water";
+        NSString *element = @"Coder Duck";
         UIImage *defaultImage = [UIImage imageNamed:@"ducky"];
         NSMutableArray *accessories = [@[@"spectacles",@"macbook",@"XCode", @"nerd tie"] mutableCopy];
 
@@ -110,7 +119,7 @@
 
     if (chosenDucks.count < 2)
     {
-        UIAlertController *chooseAnotherDuck = [UIAlertController alertControllerWithTitle:@"not enough ducks chosen" message:@"choose at least 2" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *chooseAnotherDuck = [UIAlertController alertControllerWithTitle:@"Not enough ducks chosen" message:@"choose at least 2" preferredStyle:UIAlertControllerStyleAlert];
 
         UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:nil];
 

@@ -18,16 +18,16 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter new duck name here" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2B7-HS-RTf">
-                                <rect key="frame" x="0.0" y="64" width="320" height="30"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="46"/>
                                 <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="0.55000000000000004" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="YBy-W2-bWf"/>
+                                    <constraint firstAttribute="height" constant="46" id="YBy-W2-bWf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="G2J-4y-7m1">
-                                <rect key="frame" x="0.0" y="97" width="320" height="409"/>
+                                <rect key="frame" x="0.0" y="110" width="320" height="393"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="ogt-KR-Sjs" detailTextLabel="NNn-Cy-TtF" style="IBUITableViewCellStyleValue1" id="eti-WL-JAg">
@@ -60,12 +60,9 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="gZx-mE-jKN"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTv-h5-ba7">
-                                <rect key="frame" x="0.0" y="511" width="320" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="6fU-Bp-m0h"/>
-                                </constraints>
-                                <state key="normal" title="BATTLE CHOSEN DUCKS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTv-h5-ba7">
+                                <rect key="frame" x="140" y="511" width="40" height="40"/>
+                                <state key="normal" image="duck-50">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -75,16 +72,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="G2J-4y-7m1" secondAttribute="bottom" constant="62" id="5Fa-ux-Qun"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="UTv-h5-ba7" secondAttribute="trailing" constant="-16" id="BTW-kq-uml"/>
-                            <constraint firstItem="UTv-h5-ba7" firstAttribute="top" secondItem="G2J-4y-7m1" secondAttribute="bottom" constant="5" id="CHY-8I-ufl"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="G2J-4y-7m1" secondAttribute="bottom" constant="65" id="5Fa-ux-Qun"/>
+                            <constraint firstItem="UTv-h5-ba7" firstAttribute="top" secondItem="G2J-4y-7m1" secondAttribute="bottom" constant="8" id="7ya-J9-ENj"/>
                             <constraint firstItem="2B7-HS-RTf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="EFn-2C-KpY"/>
                             <constraint firstItem="2B7-HS-RTf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="HB8-SF-XEX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="G2J-4y-7m1" secondAttribute="trailing" constant="-16" id="K9u-VP-bCS"/>
-                            <constraint firstItem="G2J-4y-7m1" firstAttribute="top" secondItem="2B7-HS-RTf" secondAttribute="bottom" constant="3" id="an6-pG-heC"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="UTv-h5-ba7" secondAttribute="bottom" constant="17" id="ZID-3F-mdo"/>
+                            <constraint firstItem="G2J-4y-7m1" firstAttribute="top" secondItem="2B7-HS-RTf" secondAttribute="bottom" id="an6-pG-heC"/>
+                            <constraint firstAttribute="centerX" secondItem="UTv-h5-ba7" secondAttribute="centerX" id="lZ4-cT-h22"/>
                             <constraint firstItem="G2J-4y-7m1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="oeX-dT-9Ls"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2B7-HS-RTf" secondAttribute="trailing" constant="-16" id="paX-or-QK2"/>
-                            <constraint firstItem="UTv-h5-ba7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="xn5-VJ-eNk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ygq-t4-Su7">
@@ -116,7 +113,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wfX-4a-qrx">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wfX-4a-qrx">
                                 <rect key="frame" x="146" y="99" width="168" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="3Nc-iw-CKA"/>
@@ -243,6 +240,9 @@
             <point key="canvasLocation" x="234" y="362"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="duck-50" width="40" height="40"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
