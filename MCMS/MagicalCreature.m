@@ -18,5 +18,16 @@
     return self;
 }
 
+- (instancetype)initWithName:(NSString *)name withElement:(NSString *)element withImage:(UIImage *)image withAccessories:(NSMutableArray*)accessories
+{
+    self = [super init];
+    self.name = name;
+    self.element = element;
+    self.image = image;
+    self.accessories = accessories;
+    return self;
+}
+
+
 
 @end

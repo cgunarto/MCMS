@@ -32,13 +32,13 @@
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.creature.accesories.count;
+    return self.creature.accessories.count;
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *accessoryCell = [self.tableView dequeueReusableCellWithIdentifier:@"accessoryCell" forIndexPath:indexPath];
-    accessoryCell.textLabel.text = self.creature.accesories[indexPath.row];
+    accessoryCell.textLabel.text = self.creature.accessories[indexPath.row];
     return accessoryCell;
 }
 

@@ -14,9 +14,10 @@
 @property NSString *element;
 @property NSInteger *strength;
 @property (strong, nonatomic) UIImage *image;
-@property NSMutableArray *accesories;
+@property NSMutableArray *accessories;
 
 - (instancetype)initWithName: (NSString *)name;
 
+- (instancetype)initWithName:(NSString *)name withElement:(NSString *)element withImage:(UIImage *)Image withAccessories:(NSMutableArray*)accessories;
 
 @end

@@ -13,7 +13,6 @@
 @interface RootViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
-
 @end
 
 @implementation RootViewController
@@ -24,15 +23,15 @@
     MagicalCreature *creatureOne = [[MagicalCreature alloc]initWithName:@"Ducky"];
     creatureOne.element = @"water";
     creatureOne.image = [UIImage imageNamed:@"ducky"];
-    creatureOne.accesories = [@[@"spectacles",@"macbook",@"XCode", @"nerd tie"]mutableCopy];
+    creatureOne.accessories = [@[@"spectacles",@"macbook",@"XCode", @"nerd tie"]mutableCopy];
     MagicalCreature *creatureTwo = [[MagicalCreature alloc]initWithName:@"Bucky"];
     creatureTwo.element = @"earth";
     creatureTwo.image = [UIImage imageNamed:@"bucky"];
-    creatureTwo.accesories = [@[@"gangsta hat", @"chain", @"long black tee"]mutableCopy];
+    creatureTwo.accessories = [@[@"gangsta hat", @"chain", @"long black tee"]mutableCopy];
     MagicalCreature *creatureThree = [[MagicalCreature alloc]initWithName:@"Lucky"];
     creatureThree.element = @"wind";
     creatureThree.image = [UIImage imageNamed:@"lucky"];
-    creatureThree.accesories = [@[@"goggles", @"bikini", @"SPF", @"lip gloss"]mutableCopy];
+    creatureThree.accessories = [@[@"goggles", @"bikini", @"SPF", @"lip gloss"]mutableCopy];
 
     self.creatures = [@[creatureOne, creatureTwo, creatureThree] mutableCopy];
 }
@@ -61,8 +60,18 @@
 {
     if(![self.textField.text isEqualToString:@""])
     {
+
+        //DEFAULT MAGICAL CREATURE
         NSString *creatureName = self.textField.text;
-        MagicalCreature *creatureToAdd = [[MagicalCreature alloc]initWithName:creatureName];
+        NSString *element = @"water";
+        UIImage *defaultImage = [UIImage imageNamed:@"ducky"];
+        NSMutableArray *accessories = [@[@"spectacles",@"macbook",@"XCode", @"nerd tie"] mutableCopy];
+
+
+        MagicalCreature *creatureToAdd = [[MagicalCreature alloc] initWithName:creatureName
+                                                                   withElement:element
+                                                                     withImage:defaultImage
+                                                               withAccessories:accessories];
         [self.creatures addObjectsFromArray:@[creatureToAdd]];
 
         [self.tableView reloadData];
@@ -72,6 +81,32 @@
     [self.textField resignFirstResponder]; //clears the keyboard
 
 }
+
+//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//
+//    UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+//
+//    MagicalCreature *creatureSelected = self.creatures[indexPath.row];
+//
+//    if (selectedCell.accessoryType == UITableViewCellAccessoryNone)
+//    {
+//       selectedCell.accessoryType = UITableViewCellAccessoryCheckmark;
+//
+////        toDoItemSelected.boolIsChecked = YES;
+//
+//    }
+//    else if (selectedCell.accessoryType == UITableViewCellAccessoryCheckmark)
+//    {
+//        selectedCell.accessoryType = UITableViewCellAccessoryNone;
+//
+////        toDoItemSelected.boolIsChecked = NO;
+//    }
+//    
+//    
+//}
+
+
 
 
 
