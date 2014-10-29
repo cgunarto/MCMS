@@ -21,6 +21,8 @@
 
 @implementation CreatureViewController
 
+#pragma mark View Life Cycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -33,9 +35,10 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    //BATTLE CHOSEN button change colors depending on Magical Creature custom property isSelectedForBattle
     if(self.creature.isSelectedForBattle == YES)
     {
-        self.battleButton.backgroundColor = [UIColor redColor];
+        self.battleButton.backgroundColor = [UIColor cyanColor];
 
     }
     else
@@ -46,6 +49,7 @@
 
 }
 
+#pragma mark Table View
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -58,6 +62,9 @@
     accessoryCell.textLabel.text = self.creature.accessories[indexPath.row];
     return accessoryCell;
 }
+
+
+#pragma mark Button Pressed Methods
 
 - (IBAction)onEditButtonPressed:(UIBarButtonItem *)editButton
 {
@@ -80,10 +87,7 @@
 
 }
 
-//returns back
-- (IBAction)unWindToList:(UIStoryboardSegue*)segue
-{
-}
+
 - (IBAction)onBattleButtonPressed:(UIButton*)button
     {
     if(self.creature.isSelectedForBattle == YES)
@@ -93,12 +97,17 @@
     }
     else
     {
-        button.backgroundColor = [UIColor redColor];
+        button.backgroundColor = [UIColor cyanColor];
         self.creature.isSelectedForBattle = YES;
     }
 
 }
 
+
+//returns back
+- (IBAction)unWindToList:(UIStoryboardSegue*)segue
+{
+}
 
 
 @end
