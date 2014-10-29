@@ -15,6 +15,7 @@
 @property NSInteger *strength;
 @property (strong, nonatomic) UIImage *image;
 @property NSMutableArray *accessories;
+@property BOOL isSelectedForBattle;
 
 - (instancetype)initWithName: (NSString *)name;
 
