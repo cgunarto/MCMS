@@ -18,14 +18,19 @@
 
 @implementation RootViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     MagicalCreature *creatureOne = [[MagicalCreature alloc]initWithName:@"Ducky"];
     MagicalCreature *creatureTwo = [[MagicalCreature alloc]initWithName:@"Bucky"];
     MagicalCreature *creatureThree = [[MagicalCreature alloc]initWithName:@"Lucky"];
 
     self.creatures = [@[creatureOne, creatureTwo, creatureThree] mutableCopy];
+}
 
+-(void) viewWillAppear:(BOOL)animated
+{
+    [self.tableView reloadData];
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -57,6 +62,7 @@
     [self.textField resignFirstResponder]; //clears the keyboard
 
 }
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

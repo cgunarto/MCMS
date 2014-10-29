@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ykp-oA-ena">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ykp-oA-ena">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -81,30 +81,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wfX-4a-qrx">
-                                <rect key="frame" x="0.0" y="64" width="320" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wfX-4a-qrx">
+                                <rect key="frame" x="76" y="132" width="168" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Mfx-dx-k0y"/>
+                                    <constraint firstAttribute="width" constant="168" id="5F7-pM-1a7"/>
+                                    <constraint firstAttribute="height" constant="30" id="y0n-JG-TjB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creature Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngf-KV-oc5">
+                                <rect key="frame" x="102" y="137" width="116" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4tF-BV-cqm"/>
+                                    <constraint firstAttribute="width" constant="116" id="EAh-kO-1XL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="wfX-4a-qrx" secondAttribute="trailing" constant="-16" id="K5r-0C-GA7"/>
-                            <constraint firstItem="wfX-4a-qrx" firstAttribute="leading" secondItem="0oy-A2-5ew" secondAttribute="leadingMargin" constant="-16" id="VON-He-GyJ"/>
-                            <constraint firstItem="wfX-4a-qrx" firstAttribute="top" secondItem="Cy0-8o-C5d" secondAttribute="bottom" id="fIU-4t-zz7"/>
+                            <constraint firstAttribute="centerX" secondItem="wfX-4a-qrx" secondAttribute="centerX" id="Q9n-kY-wyB"/>
+                            <constraint firstItem="wfX-4a-qrx" firstAttribute="top" secondItem="Cy0-8o-C5d" secondAttribute="bottom" constant="68" id="REQ-aD-1Je"/>
+                            <constraint firstAttribute="centerX" secondItem="ngf-KV-oc5" secondAttribute="centerX" id="nOA-YL-jp7"/>
+                            <constraint firstItem="ngf-KV-oc5" firstAttribute="top" secondItem="Cy0-8o-C5d" secondAttribute="bottom" constant="73" id="ufC-kK-kck"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qrE-jM-3eN">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ilu-y2-jyB">
                         <nil key="title"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="WBJ-Ap-8QA"/>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="OMS-iZ-esz">
+                            <connections>
+                                <action selector="onEditButtonPressed:" destination="md9-oB-GUh" id="cUq-vi-bDg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="ngf-KV-oc5" id="aNW-Di-8vv"/>
+                        <outlet property="textField" destination="wfX-4a-qrx" id="dqg-Jt-kpT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2j-dZ-8Jk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1127" y="362"/>
+            <point key="canvasLocation" x="1118" y="362"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9Yv-3G-BnI">
