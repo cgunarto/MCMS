@@ -120,6 +120,37 @@
     creatureVC.creature = theCreature; //we are passing the creature object from RootViewController to the segue's destination (CreatureViewController)
 
 }
+- (IBAction)onBattleChosenButton:(UIButton *)sender
+{
+
+    NSMutableArray *chosenDucks = [[NSMutableArray alloc]init];
+
+    for (int i = 0; i < self.creatures.count; i++)
+    {
+        MagicalCreature *creature = self.creatures[i];
+        if (creature.isSelectedForBattle == YES)
+        {
+            [chosenDucks addObject:creature];
+        }
+    }
+
+    if (chosenDucks.count < 2)
+    {
+        UIAlertController *chooseAnotherDuck = [UIAlertController alertControllerWithTitle:@"not enough ducks chosen" message:@"choose at least 2" preferredStyle:UIAlertControllerStyleAlert];
+
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:nil];
+
+        [chooseAnotherDuck addAction:cancel];
+        [self presentViewController:chooseAnotherDuck animated:YES completion:nil];
+
+    }
+    else
+    {
+        
+    }
+
+}
+
 
 
 @end

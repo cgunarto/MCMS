@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *elementLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *battleButton;
 
 @end
 
@@ -29,6 +30,22 @@
     self.textField.hidden = YES;
 
 }
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    if(self.creature.isSelectedForBattle == YES)
+    {
+        self.battleButton.backgroundColor = [UIColor redColor];
+
+    }
+    else
+    {
+        self.battleButton.backgroundColor = [UIColor whiteColor];
+    }
+
+
+}
+
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -67,10 +84,20 @@
 - (IBAction)unWindToList:(UIStoryboardSegue*)segue
 {
 }
+- (IBAction)onBattleButtonPressed:(UIButton*)button
+    {
+    if(self.creature.isSelectedForBattle == YES)
+    {
+        button.backgroundColor = [UIColor whiteColor];
+        self.creature.isSelectedForBattle = NO;
+    }
+    else
+    {
+        button.backgroundColor = [UIColor redColor];
+        self.creature.isSelectedForBattle = YES;
+    }
 
-
-
-
+}
 
 
 
