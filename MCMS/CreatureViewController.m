@@ -9,9 +9,12 @@
 #import "CreatureViewController.h"
 #import "RootViewController.h"
 
-@interface CreatureViewController ()
+@interface CreatureViewController () <UITableViewDataSource, UITabBarDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *elementLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -21,8 +24,22 @@
 {
     [super viewDidLoad];
     self.nameLabel.text = self.creature.name;
+    self.elementLabel.text = self.creature.element;
+    self.imageView.image = self.creature.image;
     self.textField.hidden = YES;
 
+}
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.creature.accesories.count;
+}
+
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *accessoryCell = [self.tableView dequeueReusableCellWithIdentifier:@"accessoryCell" forIndexPath:indexPath];
+    accessoryCell.textLabel.text = self.creature.accesories[indexPath.row];
+    return accessoryCell;
 }
 
 - (IBAction)onEditButtonPressed:(UIBarButtonItem *)editButton

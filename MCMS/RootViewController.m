@@ -22,8 +22,13 @@
 {
     [super viewDidLoad];
     MagicalCreature *creatureOne = [[MagicalCreature alloc]initWithName:@"Ducky"];
+    creatureOne.element = @"water";
+    creatureOne.image = [UIImage imageNamed:@"ducky"];
+    creatureOne.accesories = [@[@"floater",@"beak",@"beach towel"]mutableCopy];
     MagicalCreature *creatureTwo = [[MagicalCreature alloc]initWithName:@"Bucky"];
+    creatureTwo.element = @"earth";
     MagicalCreature *creatureThree = [[MagicalCreature alloc]initWithName:@"Lucky"];
+    creatureThree.element = @"wind";
 
     self.creatures = [@[creatureOne, creatureTwo, creatureThree] mutableCopy];
 }
@@ -43,6 +48,7 @@
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     MagicalCreature *creature = self.creatures[indexPath.row];
     cell.textLabel.text = creature.name;
+    cell.detailTextLabel.text = creature.element;
 
     return cell;
 }
