@@ -33,7 +33,7 @@
     if (self.textField.hidden)
     {
         editButton.title = @"Edit";
-        self.creature.name = self.textField.text;
+        self.creature.name = self.textField.text; // this is where we are accessing the pointer of the original object and assigning it with whatever text we put it textfield
         self.nameLabel.text = self.textField.text;
         // have to put this somewhere
     }

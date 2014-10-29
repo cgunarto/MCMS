@@ -14,6 +14,7 @@
 {
     self = [super init];
     self.name = name;
+//    self.type = type;
     return self;
 }
 
