@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ykp-oA-ena">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ykp-oA-ena">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,8 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter new duck name here" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2B7-HS-RTf">
+                                <rect key="frame" x="0.0" y="64" width="320" height="30"/>
+                                <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="0.55000000000000004" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="YBy-W2-bWf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="G2J-4y-7m1">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="97" width="320" height="409"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="ogt-KR-Sjs" detailTextLabel="NNn-Cy-TtF" style="IBUITableViewCellStyleValue1" id="eti-WL-JAg">
@@ -51,38 +60,35 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="gZx-mE-jKN"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RdN-Nb-e23">
-                                <rect key="frame" x="0.0" y="477" width="320" height="44"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTv-h5-ba7">
-                                        <rect key="frame" x="105" y="8" width="97" height="30"/>
-                                        <state key="normal" title="Battle Chosen">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="onBattleChosenButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sJ2-58-hRv"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTv-h5-ba7">
+                                <rect key="frame" x="0.0" y="511" width="320" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="6fU-Bp-m0h"/>
+                                </constraints>
+                                <state key="normal" title="BATTLE CHOSEN DUCKS">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBattleChosenButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sJ2-58-hRv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="G2J-4y-7m1" secondAttribute="bottom" id="7bN-In-5O3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="G2J-4y-7m1" secondAttribute="trailing" constant="-16" id="Qvc-Y9-Ov2"/>
-                            <constraint firstItem="G2J-4y-7m1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="Vu9-lV-EG3"/>
-                            <constraint firstItem="G2J-4y-7m1" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="cLy-8h-LwG"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="G2J-4y-7m1" secondAttribute="bottom" constant="62" id="5Fa-ux-Qun"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UTv-h5-ba7" secondAttribute="trailing" constant="-16" id="BTW-kq-uml"/>
+                            <constraint firstItem="UTv-h5-ba7" firstAttribute="top" secondItem="G2J-4y-7m1" secondAttribute="bottom" constant="5" id="CHY-8I-ufl"/>
+                            <constraint firstItem="2B7-HS-RTf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="EFn-2C-KpY"/>
+                            <constraint firstItem="2B7-HS-RTf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="HB8-SF-XEX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="G2J-4y-7m1" secondAttribute="trailing" constant="-16" id="K9u-VP-bCS"/>
+                            <constraint firstItem="G2J-4y-7m1" firstAttribute="top" secondItem="2B7-HS-RTf" secondAttribute="bottom" constant="3" id="an6-pG-heC"/>
+                            <constraint firstItem="G2J-4y-7m1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="oeX-dT-9Ls"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2B7-HS-RTf" secondAttribute="trailing" constant="-16" id="paX-or-QK2"/>
+                            <constraint firstItem="UTv-h5-ba7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="xn5-VJ-eNk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ygq-t4-Su7">
                         <nil key="title"/>
-                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="2B7-HS-RTf">
-                            <rect key="frame" x="96" y="7" width="128" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="nr9-qu-hn5">
                             <connections>
                                 <action selector="onAddButtonPressed:" destination="vXZ-lx-hvc" id="hF3-RR-BKJ"/>
@@ -96,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="683" y="362"/>
+            <point key="canvasLocation" x="677" y="362"/>
         </scene>
         <!--Creature View Controller-->
         <scene sceneID="LfT-5Y-4yb">
