@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "MagicalCreature.h"
 #import "CreatureViewController.h"
+#import <stdlib.h>
 
 @interface RootViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -146,7 +147,18 @@
     }
     else
     {
-        
+        MagicalCreature *creature = [chosenDucks objectAtIndex:arc4random() % [chosenDucks count]];
+
+        NSString *winningMessage = (@"%@ is the winner", creature.name);
+
+        UIAlertController *announceWinner = [UIAlertController alertControllerWithTitle:@"We have a winner" message:winningMessage preferredStyle:UIAlertControllerStyleAlert];
+
+        UIAlertAction *playAgain = [UIAlertAction actionWithTitle:@"Play again" style:UIAlertActionStyleDefault handler:nil];
+
+        [announceWinner addAction:playAgain];
+        [self presentViewController:announceWinner animated:YES completion:nil];
+
+
     }
 
 }
