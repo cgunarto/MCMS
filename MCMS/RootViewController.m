@@ -22,17 +22,17 @@
 {
     [super viewDidLoad];
     MagicalCreature *creatureOne = [[MagicalCreature alloc]initWithName:@"Ducky"];
-    creatureOne.element = @"water";
+    creatureOne.element = @"Coder Duck";
     creatureOne.image = [UIImage imageNamed:@"ducky"];
     creatureOne.accessories = [@[@"spectacles",@"macbook",@"XCode", @"nerd tie"]mutableCopy];
 
     MagicalCreature *creatureTwo = [[MagicalCreature alloc]initWithName:@"Bucky"];
-    creatureTwo.element = @"earth";
+    creatureTwo.element = @"Urban Duck";
     creatureTwo.image = [UIImage imageNamed:@"bucky"];
     creatureTwo.accessories = [@[@"gangsta hat", @"chain", @"long black tee"]mutableCopy];
     
     MagicalCreature *creatureThree = [[MagicalCreature alloc]initWithName:@"Lucky"];
-    creatureThree.element = @"wind";
+    creatureThree.element = @"Sassy Duck";
     creatureThree.image = [UIImage imageNamed:@"lucky"];
     creatureThree.accessories = [@[@"goggles", @"bikini", @"SPF", @"lip gloss"]mutableCopy];
 
