@@ -178,7 +178,10 @@
     //otherwise randomize a winnder from chosen ducks
     else
     {
-        MagicalCreature *creature = [chosenDucks objectAtIndex:arc4random() % [chosenDucks count]];
+
+        int random = arc4random() % [chosenDucks count];
+        MagicalCreature *creature = [chosenDucks objectAtIndex:random];
+        creature.winCount = creature.winCount + 1;
 
         NSString *winningMessage = (@"%@ is the winner", creature.name);
 

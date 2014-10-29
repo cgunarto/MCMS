@@ -153,18 +153,6 @@
                                     <constraint firstAttribute="height" constant="140" id="yuJ-g1-oxA"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUX-Pc-Ax7">
-                                <rect key="frame" x="0.0" y="478" width="320" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="g9f-zw-wrz"/>
-                                </constraints>
-                                <state key="normal" title="Choose for BATTLE">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onBattleButtonPressed:" destination="md9-oB-GUh" eventType="touchUpInside" id="oIy-1R-UUC"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XuL-M3-6ZS">
                                 <rect key="frame" x="0.0" y="212" width="320" height="267"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -185,6 +173,38 @@
                                     <outlet property="delegate" destination="md9-oB-GUh" id="x25-ep-LLN"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUX-Pc-Ax7">
+                                <rect key="frame" x="0.0" y="478" width="320" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="g9f-zw-wrz"/>
+                                </constraints>
+                                <state key="normal" title="Choose for BATTLE">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBattleButtonPressed:" destination="md9-oB-GUh" eventType="touchUpInside" id="oIy-1R-UUC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wins" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhb-4q-KAb">
+                                <rect key="frame" x="148" y="171" width="37" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="5xf-JT-pfx"/>
+                                    <constraint firstAttribute="height" constant="21" id="EIj-hO-xRZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wins" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DN-ux-1PM">
+                                <rect key="frame" x="193" y="171" width="35" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4p6-ou-yeQ"/>
+                                    <constraint firstAttribute="width" constant="35" id="DyX-ey-nl7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -193,12 +213,16 @@
                             <constraint firstItem="P5x-tf-xxw" firstAttribute="top" secondItem="cUX-Pc-Ax7" secondAttribute="bottom" id="3Gb-rH-NQS"/>
                             <constraint firstItem="cUX-Pc-Ax7" firstAttribute="leading" secondItem="0oy-A2-5ew" secondAttribute="leadingMargin" constant="-16" id="5Gn-9I-iSR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cUX-Pc-Ax7" secondAttribute="trailing" constant="-16" id="7ps-Ce-UZL"/>
+                            <constraint firstItem="7DN-ux-1PM" firstAttribute="top" secondItem="Upw-n8-MZY" secondAttribute="bottom" constant="9" id="IU3-46-9Ia"/>
                             <constraint firstItem="0v9-mW-tOZ" firstAttribute="top" secondItem="Cy0-8o-C5d" secondAttribute="bottom" id="Nb0-Ga-K3X"/>
                             <constraint firstItem="wfX-4a-qrx" firstAttribute="top" secondItem="Cy0-8o-C5d" secondAttribute="bottom" constant="35" id="SlB-YU-4M0"/>
+                            <constraint firstItem="Rhb-4q-KAb" firstAttribute="leading" secondItem="0v9-mW-tOZ" secondAttribute="trailing" constant="8" id="TN3-RH-W0j"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XuL-M3-6ZS" secondAttribute="trailing" constant="-16" id="XVb-bt-7fq"/>
                             <constraint firstItem="Upw-n8-MZY" firstAttribute="top" secondItem="wfX-4a-qrx" secondAttribute="bottom" constant="12" id="a7G-7M-GAX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Upw-n8-MZY" secondAttribute="trailing" constant="12" id="eRY-5g-wb9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ngf-KV-oc5" secondAttribute="trailing" constant="-10" id="het-7n-PUW"/>
+                            <constraint firstItem="7DN-ux-1PM" firstAttribute="leading" secondItem="Rhb-4q-KAb" secondAttribute="trailing" constant="8" id="iZh-6N-pYx"/>
+                            <constraint firstItem="Rhb-4q-KAb" firstAttribute="top" secondItem="Upw-n8-MZY" secondAttribute="bottom" constant="9" id="lvG-QB-kuh"/>
                             <constraint firstItem="XuL-M3-6ZS" firstAttribute="leading" secondItem="0oy-A2-5ew" secondAttribute="leadingMargin" constant="-16" id="nzm-9S-8aI"/>
                             <constraint firstItem="ngf-KV-oc5" firstAttribute="top" secondItem="Cy0-8o-C5d" secondAttribute="bottom" constant="35" id="vI9-mm-23d"/>
                             <constraint firstItem="XuL-M3-6ZS" firstAttribute="top" secondItem="0v9-mW-tOZ" secondAttribute="bottom" constant="8" id="yKD-sP-BVF"/>
@@ -221,6 +245,7 @@
                         <outlet property="nameLabel" destination="ngf-KV-oc5" id="aNW-Di-8vv"/>
                         <outlet property="tableView" destination="XuL-M3-6ZS" id="yHA-9O-THa"/>
                         <outlet property="textField" destination="wfX-4a-qrx" id="dqg-Jt-kpT"/>
+                        <outlet property="winCountLabel" destination="Rhb-4q-KAb" id="gPp-XN-bc0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2j-dZ-8Jk" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *battleButton;
+@property (weak, nonatomic) IBOutlet UILabel *winCountLabel;
 
 @end
 
@@ -28,6 +29,9 @@
     [super viewDidLoad];
     self.nameLabel.text = self.creature.name;
     self.elementLabel.text = self.creature.element;
+
+    self.winCountLabel.text = [NSString stringWithFormat:@"%ld", (long)self.creature.winCount ];
+
     self.imageView.image = self.creature.image;
     self.textField.hidden = YES;
 
